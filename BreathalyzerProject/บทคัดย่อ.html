@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทคัดย่อ</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <style type="text/css">
+        body {
+          color: #3A5D9C;
+          background-color: #D1F6FF }
+        h1{
+            text-align: center;
+        }
+        </style>
+
+        <ul class="nav nav-pills nav-fill" >
+            <li class="nav-item">
+                <a href="index.html" class="nav-link" aria-current="page">Breathalyzer</a>
+            </li>
+            <li class="nav-item">
+                <a href="บทคัดย่อ.html" class="nav-link active" aria-current="page">บทคัดย่อ</a>
+            </li>
+            <li class="nav-item">
+                <a href="วิธีใช้งาน.html" class="nav-link">วิธีใช้งาน</a>
+            </li>
+            <li class="nav-item">
+                <a href="sourcecode.html" class="nav-link">Source code</a>
+            </li>
+            <li class="nav-item">
+                <a href="ผู้จัดทำ.html" class="nav-link">ผู้จัดทำ</a>
+            </li>
+        </ul>
+        <br>
+
+        <div class="container">
+        <h1>บทคัดย่อ</h1>
+        <p>เนื่องจากในปัจจุบันเครื่องดื่มแอลกอฮอล์เป็นเครื่องดื่มที่มีการดื่มอยู่มากในประเทศไทย ทั้งเพศชายและหญิง คณะผู้จัดทำจึงได้คิดค้นเครื่องวัดปริมาณแอลกอฮอล์ในลมหายใจ(Breathalyzer)
+            โดยได้สร้างเป็นไมโทรคอนโทรลเลอร์ที่มีส่วนประกอบหลักคือบอร์ด Arduino ในการเชื่อมต่อและสั่งการ OLED display ใช้ในการแสดงผล 
+            และ  MQ3 sensor เป็นตัววัดระดับแอลกอฮอล์ เครื่องวัดปรมาณแอลกอฮอล์นี้ได้ใช้ภาษาซีในการพัฒนา
+            ซึ่งจะวัดปริมาณแอลกอฮอล์ในลมหายใจโดยการเป่าลมไปที่  MQ3 sensor 
+            จากนั้นจะแสดงผลผ่านทาง OLED display โดยจะมีการแบ่งระดับแอลกอฮอล์ในลมหายใจ 5 ระดับ คือ น้อยกว่า 200 จะแสดงผลว่า "You are sober" 
+            มากกว่าหรือเท่ากับ 200 และน้อยกว่า 280 จะแสดงผลว่า "You had a beer." มากกว่าหรือเท่ากับ 280 และน้อยกว่า 350 จะแสดงผลว่า "Two or more beers." 
+            มากกว่าหรือเท่ากับ 350 หรือน้อยกว่า 450 จะแสดงผลว่า "I smell Oyzo!" และหากมากกว่า 450 จะแสดงผลว่า "You are drunk!" 
+            เครื่องBreathalyzerมีประโยชน์ในการวัดปริมาณแอลกอฮอล์ที่ทำได้โดยง่าย รวดเร็ว ไม่ซับซ้อน สามารถนำไปพัฒนาได้ง่าย และราคาไม่แพง</p>
+
+        </div>
+
+        <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
