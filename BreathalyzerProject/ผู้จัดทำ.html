@@ -8,8 +8,47 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
+<div>
     <style type="text/css">
+        
+        .container {
+        position: relative;
+        width: 39%;
+        }
+
+        .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        }
+
+        .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%)
+        }
+
+        .container:hover .image {
+        opacity: 0.3;
+        }
+
+        .container:hover .middle {
+        opacity: 1;
+        }
+
+        .text {
+        background-color: #3A5D9C;
+        color: white;
+        font-size: 16px;
+        padding: 16px 32px;
+        }
         body {
           color: #3A5D9C;
           background-color: #D1F6FF }
@@ -40,22 +79,40 @@
             </li>
         </ul>
         <br>
-
         <div class="container">
         <h1>ผู้จัดทำ</h1>
+        </div>
         <br>
-        <img src="img/ps/035.jpg" class="img-thumbnail mx-auto d-block" width="40%" height="40%">
-        <p>นายชาคริต  ดิสกุล 63070035</p>
+
+        <div class="container">
+        <img src="img/ps/035.jpg" alt="Avatar" class="image" style="width:100%">
+        <div class="middle">
+        <div class="text">ชาคริต  ดิสกุล 63070035</div>
+        </div>
+        </div>
+        
         <br>
-        <img src="img/ps/039.jpg" class="img-thumbnail mx-auto d-block" width="40%" height="40%">
-        <p>นางสาวชุติมา ณะแก้ว 6307039</p>
+        <div class="container">
+        <img src="img/ps/039.jpg" alt="Avatar" class="image" style="width:100%">
+        <div class="middle">
+        <div class="text">ชุติมา ณะแก้ว 6307039</div>
+        </div>
+        </div>
+
         <br>
-        <img src="img/ps/140.jpg" class="img-thumbnail mx-auto d-block" width="40%" height="40%">
-        <p>นางสาวยมลพร เชิดบำรุง 63070140</p>
+        <div class="container">
+        <img src="img/ps/140.jpg" alt="Avatar" class="image" style="width:100%">
+        <div class="middle">
+        <div class="text">ยมลพร เชิดบำรุง 63070140</div>
+        </div>
+        </div>
+
         <br>
-        <img src="img/ps/152.JPG" class="img-thumbnail mx-auto d-block" width="40%" height="40%">
-        <p>นางสาวลักษมี ลั่นซ้าย 63070152</p>
-        <br>
+        <div class="container">
+        <img src="img/ps/152.jpg" alt="Avatar" class="image" style="width:100%">
+        <div class="middle">
+        <div class="text">ลักษมี ลั่นซ้าย 63070152</div>
+        </div>
         </div>
 
         <script src="js/bootstrap.min.js"></script>
