@@ -17,14 +17,15 @@
             background-color: #D1F6FF }
         h1{
             text-align: center;
-            /* text-decoration: underline overline line-through;
-            border-top: 3px solid red;
-            border-bottom: 3px solid green;
-            display: inline-block;
-            padding: 2px 0 0 0;
-            font-size: 50px;
-            margin: 0; */
         }
+        #box{
+        border-radius: 25px;
+        padding: 10px;
+        background: rgba(177, 173, 230, 0.397);
+        opacity: 0.5;
+        color:black;
+        }
+
         </style>
 
         <ul class="nav nav-pills nav-fill" >
@@ -48,7 +49,7 @@
 
         <div class="container">
         <h1><u>บทคัดย่อ</u></h1>
-        <p> &nbsp &nbsp &nbsp &nbsp &nbspเนื่องจากในปัจจุบันเครื่องดื่มแอลกอฮอล์เป็นเครื่องดื่มที่มีการดื่มอยู่มากในประเทศไทย ทั้งเพศชายและหญิง คณะผู้จัดทำจึงได้คิดค้นเครื่องวัดปริมาณแอลกอฮอล์ในลมหายใจ(Breathalyzer)
+        <p id="box"> &nbsp &nbsp &nbsp &nbsp &nbspเนื่องจากในปัจจุบันเครื่องดื่มแอลกอฮอล์เป็นเครื่องดื่มที่มีการดื่มอยู่มากในประเทศไทย ทั้งเพศชายและหญิง คณะผู้จัดทำจึงได้คิดค้นเครื่องวัดปริมาณแอลกอฮอล์ในลมหายใจ(Breathalyzer)
             โดยได้สร้างเป็นไมโทรคอนโทรลเลอร์ที่มีส่วนประกอบหลักคือบอร์ด Arduino ในการเชื่อมต่อและสั่งการ OLED display ใช้ในการแสดงผล 
             และ  MQ3 sensor เป็นตัววัดระดับแอลกอฮอล์ เครื่องวัดปรมาณแอลกอฮอล์นี้ได้ใช้ภาษาซีในการพัฒนา
             ซึ่งจะวัดปริมาณแอลกอฮอล์ในลมหายใจโดยการเป่าลมไปที่  MQ3 sensor
