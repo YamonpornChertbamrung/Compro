@@ -1,76 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breathalyzer</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breathalyzer</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/games/gam-10/gam987.ani), url(https://cur.cursors-4u.net/games/gam-10/gam987.png), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2009/06/02/animated-dragonica-star-glove-pointer.html" target="_blank" title="Animated Dragonica Star Glove Pointer"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Animated Dragonica Star Glove Pointer" style="position:absolute; top: 0px; right: 0px;" /></a>
-    <style type="text/css">
-        body {
-            font-family: "Itim", serif;
-            font-size: 15pt;
-            color: #3A5D9C;
-            background-color: #D1F6FF }
-            A{cursor: url("https://cur.cursors-4u.net/games/images10/gam987.gif");}
-        #box{
-            border-radius: 25px;
-            padding: 10px;
-            color: #3A5D9C;
-            background: rgba(76, 210, 233, 0.233);
-            opacity: 1;
-        }
-        h1{
-            text-align: center;
-        }
-        </style>
+  <style type="text/css">
+    * {
+      cursor: url(https://cur.cursors-4u.net/games/gam-10/gam987.ani), url(https://cur.cursors-4u.net/games/gam-10/gam987.png), auto !important;
+    }
+  </style><a href="https://www.cursors-4u.com/cursor/2009/06/02/animated-dragonica-star-glove-pointer.html"
+    target="_blank" title="Animated Dragonica Star Glove Pointer"><img src="https://cur.cursors-4u.net/cursor.png"
+      border="0" alt="Animated Dragonica Star Glove Pointer" style="position:absolute; top: 0px; right: 0px;" /></a>
+  <style type="text/css">
+    body {
+      font-family: "Itim", serif;
+      margin: 0;
+      font-size: 15pt;
+      color: #3A5D9C;
+      background-color: #D1F6FF
+    }
 
-        <ul class="nav nav-pills nav-fill" >
-            <li class="nav-item">
-                <a href="index.html" class="nav-link active" aria-current="page">Breathalyzer</a>
-            </li>
-            <li class="nav-item">
-                <a href="บทคัดย่อ.html" class="nav-link">บทคัดย่อ</a>
-            </li>
-            <li class="nav-item">
-                <a href="วิธีใช้งาน.html" class="nav-link">วิธีใช้งาน</a>
-            </li>
-            <li class="nav-item">
-                <a href="sourcecode.html" class="nav-link">Source code</a>
-            </li>
-            <li class="nav-item">
-                <a href="ผู้จัดทำ.html" class="nav-link">ผู้จัดทำ</a>
-            </li>
-        </ul>
-        <br>
+    * {
+      box-sizing: border-box;
+    }
 
-        <img src="img/im1.jpg" class="img-thumbnail mx-auto d-block" width="40%" height="40%">
-        <br>
+    img {
+      vertical-align: middle;
+    }
 
-        <h1><img src="https://1.bp.blogspot.com/-p64yA9tmEWk/Wl7-P9PoziI/AAAAAAAATiU/vEg3ocF3WhEBMySU-cWGfADNYM075DsuACLcBGAs/s1600/rilakkuma5.gif" alt="Smiley face" width="40" height="40" style="vertical-align:middle"><u> Breathalyzer </u><img src="https://1.bp.blogspot.com/-p64yA9tmEWk/Wl7-P9PoziI/AAAAAAAATiU/vEg3ocF3WhEBMySU-cWGfADNYM075DsuACLcBGAs/s1600/rilakkuma5.gif" alt="Smiley face" width="40" height="40" style="vertical-align:middle"></h1>
-        <div class="container" id="box">
-        <br>
-        <h5>Arduino UNO R3</h5>
-        <p><i class="fas fa-angle-double-right"></i>เป็นไมโครคอนโทรลเลอร์ สามารถนำไปเชื่อมต่อเพื่อสั่งการเครื่องมืออิเล็กทรอนิกส์ต่างๆได้ หลักการใช้งาน จะเป็นการ INPUT/OUTPUT ค่าผ่านทาง Port  Analog และ Digital</p>
-        <br>
-        <h5>0.96' I2C OLED display</h5>
-        <p><i class="fas fa-angle-double-right"></i>จอภาพที่มีลักษณะคล้ายแผ่นฟิล์ม ใช้ไฟได้ทั้ง 3.3V หรือ 5V ให้จอสว่างแสดงผลมองเห็นได้อย่างชัดเจน</p>
-        <br>
-        <h5>MQ3 sensor</h5>
-        <p><i class="fas fa-angle-double-right"></i>ใช้วัดระดับแอลกอฮอล์ ในอากาศ หรือ ในลมหายใจ ความไวสูงใช้งานง่าย และยังมี Output ทั้ง Analog และ Digital สามารถนำไปประยุกต์ใช้เป็นเครื่องวัดปริมาณแอลกอฮอล์</p>
-        <br>
-        <h5>Breadboard</h5>
-        <p><i class="fas fa-angle-double-right"></i>เป็นบอร์ดที่ใช้ทดลองวงจรอิเล็กทรอนิกส์ ลักษณะเป็นแผ่นพลาสติกหนาสีขาว บนแผ่นมีรูเรียงกันจำนวนมาก ภายในรูมีตัวนำไฟฟ้าซึ่งเชื่อมต่อกันในรูปแบบที่มีการกำหนดไว้</p>
-        <br>
-        <h5>Wire</h5>
-        <p><i class="fas fa-angle-double-right"></i>ใช้เชื่อมต่อระหว่างวงจรอิเล็กทรอนิกส์ระยะไกล</p>
-        </div>
+    .container {
+      position: relative;
+    }
 
-        <script src="js/bootstrap.min.js"></script>
+    .mySlides {
+      display: none;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+
+    #box {
+      border-radius: 25px;
+      padding: 10px;
+      color: #3A5D9C;
+      background: rgba(76, 210, 233, 0.233);
+      opacity: 1;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* Container for image text */
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Six columns side by side */
+    .column {
+      float: left;
+      width: 16.66%;
+    }
+
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  </style>
+
+  <ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <a href="index.html" class="nav-link active" aria-current="page">Breathalyzer</a>
+    </li>
+    <li class="nav-item">
+      <a href="บทคัดย่อ.html" class="nav-link">บทคัดย่อ</a>
+    </li>
+    <li class="nav-item">
+      <a href="วิธีใช้งาน.html" class="nav-link">วิธีใช้งาน</a>
+    </li>
+    <li class="nav-item">
+      <a href="sourcecode.html" class="nav-link">Source code</a>
+    </li>
+    <li class="nav-item">
+      <a href="ผู้จัดทำ.html" class="nav-link">ผู้จัดทำ</a>
+    </li>
+  </ul>
+  <br>
+
+  <img src="img/im1.jpg" class="img-thumbnail mx-auto d-block" width="40%" height="40%">
+  <br>
+
+  <h1><img
+      src="https://1.bp.blogspot.com/-p64yA9tmEWk/Wl7-P9PoziI/AAAAAAAATiU/vEg3ocF3WhEBMySU-cWGfADNYM075DsuACLcBGAs/s1600/rilakkuma5.gif"
+      alt="Smiley face" width="40" height="40" style="vertical-align:middle"><u> Breathalyzer </u><img
+      src="https://1.bp.blogspot.com/-p64yA9tmEWk/Wl7-P9PoziI/AAAAAAAATiU/vEg3ocF3WhEBMySU-cWGfADNYM075DsuACLcBGAs/s1600/rilakkuma5.gif"
+      alt="Smiley face" width="40" height="40" style="vertical-align:middle"></h1>
+  <div class="container" id="box">
+    <br>
+    <h5>Arduino UNO R3</h5>
+    <p><i class="fas fa-angle-double-right"></i>เป็นไมโครคอนโทรลเลอร์
+      สามารถนำไปเชื่อมต่อเพื่อสั่งการเครื่องมืออิเล็กทรอนิกส์ต่างๆได้ หลักการใช้งาน จะเป็นการ INPUT/OUTPUT ค่าผ่านทาง
+      Port Analog และ Digital</p>
+    <br>
+    <h5>0.96' I2C OLED display</h5>
+    <p><i class="fas fa-angle-double-right"></i>จอภาพที่มีลักษณะคล้ายแผ่นฟิล์ม ใช้ไฟได้ทั้ง 3.3V หรือ 5V
+      ให้จอสว่างแสดงผลมองเห็นได้อย่างชัดเจน</p>
+    <br>
+    <h5>MQ3 sensor</h5>
+    <p><i class="fas fa-angle-double-right"></i>ใช้วัดระดับแอลกอฮอล์ ในอากาศ หรือ ในลมหายใจ ความไวสูงใช้งานง่าย และยังมี
+      Output ทั้ง Analog และ Digital สามารถนำไปประยุกต์ใช้เป็นเครื่องวัดปริมาณแอลกอฮอล์</p>
+    <br>
+    <h5>Breadboard</h5>
+    <p><i class="fas fa-angle-double-right"></i>เป็นบอร์ดที่ใช้ทดลองวงจรอิเล็กทรอนิกส์ ลักษณะเป็นแผ่นพลาสติกหนาสีขาว
+      บนแผ่นมีรูเรียงกันจำนวนมาก ภายในรูมีตัวนำไฟฟ้าซึ่งเชื่อมต่อกันในรูปแบบที่มีการกำหนดไว้</p>
+    <br>
+    <h5>Wire</h5>
+    <p><i class="fas fa-angle-double-right"></i>ใช้เชื่อมต่อระหว่างวงจรอิเล็กทรอนิกส์ระยะไกล</p>
+  </div>
+  <br>
+
+
+  <div class="container pt-3 mx-auto" style="width:50%" id="box">
+    <h2 style="text-align:center">Slideshow Gallery</h2>
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="img/im7.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="img/im2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="img/im3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="img/im4.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="img/im5.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="img/im6.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="img/im7.jpg" style="width:100%" onclick="currentSlide(1)" alt="รูปที่ 1">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/im2.jpg" style="width:100%" onclick="currentSlide(2)" alt="รูปที่ 2">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/im3.jpg" style="width:100%" onclick="currentSlide(3)"
+          alt="รูปที่ 3">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/im4.jpg" style="width:100%" onclick="currentSlide(4)"
+          alt="รูปที่ 4">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/im5.jpg" style="width:100%" onclick="currentSlide(5)"
+          alt="รูปที่ 5">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/im6.jpg" style="width:100%" onclick="currentSlide(6)"
+          alt="รูปที่ 6">
+      </div>
+    </div>
+  </div>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+  </script>
+
+  <script src="js/bootstrap.min.js">
+
+  </script>
 </body>
+
 </html>
